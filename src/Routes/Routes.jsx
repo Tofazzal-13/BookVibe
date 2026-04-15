@@ -4,6 +4,7 @@ import Homepage from "../Pages/Homepage/Homepage";
 import Books from "../Pages/Books/Books";
 import { createBrowserRouter } from "react-router";
 import Errorpage from "../Pages/ErrorPage/Errorpage";
+import BookDetails from "../Pages/BookDetails/BookDetails";
 
 
 
@@ -20,6 +21,10 @@ export const router = createBrowserRouter(
         {
           path: "/books",
           element: <Books></Books>
+        },
+        {
+            path: "/bookDetails/:id",
+            Component: BookDetails
         }
       ],
       errorElement: <Errorpage></Errorpage>
