@@ -3,6 +3,8 @@ import MainLayout from "../Layout/MainLayout";
 import Homepage from "../Pages/Homepage/Homepage";
 import Books from "../Pages/Books/Books";
 import { createBrowserRouter } from "react-router";
+import Errorpage from "../Pages/ErrorPage/Errorpage";
+
 
 
 export const router = createBrowserRouter(
@@ -19,7 +21,8 @@ export const router = createBrowserRouter(
           path: "/books",
           element: <Books></Books>
         }
-      ]
+      ],
+      errorElement: <Errorpage></Errorpage>
     },
     
   ]
