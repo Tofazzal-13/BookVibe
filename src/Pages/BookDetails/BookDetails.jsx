@@ -25,7 +25,7 @@ const BookDetails = () => {
     const expectedBook = books.find(book => book.bookId == id)
     const { bookName, author, image, totalPages, category, tags, review, publisher, yearOfPublishing } = expectedBook
    
-    const {handleMarkAsRead} = useContext(BookContext)
+    const {handleMarkAsRead, handleWishList} = useContext(BookContext)
     
     
     
@@ -58,7 +58,7 @@ const BookDetails = () => {
                     </div>
                     <div className='flex gap-2'>
                         <button className="btn" onClick={() => handleMarkAsRead(expectedBook)}>Mark at Read</button>
-                        <button className="btn btn-primary">Add to Wishlist</button>
+                        <button className="btn btn-primary" onClick={() => handleWishList(expectedBook)}>Add to Wishlist</button>
                     </div>
                 </div>
             </div>
